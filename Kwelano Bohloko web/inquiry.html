@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make an Inquiry | Donate, Volunteer or Partner | Kwelano Bohloko</title>
+  <meta name="description" content="Make an enquiry about donating, volunteering, sponsoring or partnering with Kwelano Bohloko in Mankweng, Polokwane. Get an instant reply on cost and availability.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://YOUR-SITE.netlify.app/inquiry.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Make an Inquiry | Donate, Volunteer or Partner | Kwelano Bohloko">
+  <meta property="og:description" content="Make an enquiry about donating, volunteering, sponsoring or partnering with Kwelano Bohloko in Mankweng, Polokwane. Get an instant reply on cost and availability.">
+  <meta property="og:url" content="https://YOUR-SITE.netlify.app/inquiry.html">
+  <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/home.jpeg">
+  <meta name="theme-color" content="#176b3a">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Kwelano Bohloko logo" width="55" height="55">
+    <span class="site-name">Kwelano Bohloko</span>
+  </div>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="support.html">Support</a>
+    <a href="inquiry.html" class="active" aria-current="page">Inquiry</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-header">
+    <h1>Make an Inquiry</h1>
+    <p>Contact us if you would like more information, volunteer or offer support.</p>
+  </section>
+
+  <section class="form-section">
+    <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" novalidate>
+      <p class="form-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
+      <label for="name">Full name <span aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" data-rule="name" required aria-describedby="err-name" autocomplete="name">
+      <span class="error" id="err-name" aria-live="polite"></span>
+
+      <label for="email">Email address <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" data-rule="email" required aria-describedby="err-email" autocomplete="email" inputmode="email">
+      <span class="error" id="err-email" aria-live="polite"></span>
+
+      <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+      <small id="hint-phone">South African number, e.g. 072 055 1036.</small>
+      <input type="tel" id="phone" name="phone" data-rule="phone" required aria-describedby="err-phone hint-phone" autocomplete="tel" inputmode="tel" placeholder="072 055 1036">
+      <span class="error" id="err-phone" aria-live="polite"></span>
+
+      <label for="type">Reason for Contact <span aria-hidden="true">*</span></label>
+      <select id="type" name="type" data-rule="select" required aria-describedby="err-type">
+        <option value="">Select an option</option>
+        <option value="donation">Donation</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="sponsor">Sponsorship or Partnership</option>
+        <option value="services">Service Information</option>
+        <option value="other">Other</option>
+      </select>
+      <span class="error" id="err-type" aria-live="polite"></span>
+
+      <label for="item">Item or service <span class="optional">(optional)</span></label>
+      <input type="text" id="item" name="item" aria-describedby="err-item" maxlength="60" placeholder="e.g. Food parcels">
+      <span class="error" id="err-item" aria-live="polite"></span>
+
+      <label for="quantity">Quantity, hours per week, or months <span class="optional">(optional)</span></label>
+      <small id="hint-quantity">Items to donate, volunteer hours per week, or months to sponsor.</small>
+      <input type="number" id="quantity" name="quantity" data-rule="optionalNumber" aria-describedby="err-quantity hint-quantity" min="1" max="1000" inputmode="numeric">
+      <span class="error" id="err-quantity" aria-live="polite"></span>
+
+      <label for="date">Preferred date <span class="optional">(optional)</span></label>
+      <input type="date" id="date" name="date" data-rule="futureDate" aria-describedby="err-date">
+      <span class="error" id="err-date" aria-live="polite"></span>
+
+      <label for="message">Your message <span aria-hidden="true">*</span></label>
+      <small id="hint-message">Between 10 and 500 characters.</small>
+      <textarea rows="6" maxlength="500" id="message" name="message" data-rule="message" required aria-describedby="err-message hint-message"></textarea>
+      <span class="error" id="err-message" aria-live="polite"></span>
+      <p class="char-count" id="msg-count">0 / 500</p>
+
+      <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+      <label class="check"><input type="checkbox" id="consent" name="consent" data-rule="consent" required aria-describedby="err-consent"> I agree that the centre may contact me about this inquiry. <span aria-hidden="true">*</span></label>
+      <span class="error" id="err-consent" aria-live="polite"></span>
+
+      <p class="form-error" id="form-fail" role="alert" tabindex="-1" hidden>Sorry, we could not send your inquiry. Please try again or call 072 055 1036.</p>
+
+      <button class="btn" type="submit">Submit Inquiry</button>
+    </form>
+    <div class="form-result" id="form-result" aria-live="polite" hidden></div>
+  </section>
+
+  <section class="notice">
+    <h2>Important</h2>
+    <p>
+      Your inquiry is sent to the centre through a secure form service.
+      Please do not include ID numbers or bank details. If you prefer to
+      speak to someone, <a href="contact.html">contact us</a> directly.
+    
+    </p>
+  </section>
+</main>
+
+<footer>
+
+    <div>
+        <strong>Kwelano Bohloko Old Age and Disability Centre</strong>
+        <p>&copy; 2026 Kwelano Bohloko. NPO listed with the Limpopo Department of Social Development.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="sitemap.html">Sitemap</a>
+    </div>
+
+</footer>
+<script src="js/forms.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>

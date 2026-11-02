@@ -1,0 +1,44 @@
+[
+  {
+    "id": "food-parcels",
+    "name": "Food parcels",
+    "category": "Food",
+    "description": "Non-perishable groceries for regular meals.",
+    "details": "Non-perishable groceries such as maize meal, rice, tinned food and cooking oil help the centre provide regular meals."
+  },
+  {
+    "id": "toiletries",
+    "name": "Toiletries",
+    "category": "Hygiene",
+    "description": "Soap, toothpaste and other hygiene items.",
+    "details": "Soap, toothpaste, lotion and other hygiene items support the comfort and dignity of beneficiaries."
+  },
+  {
+    "id": "office-equipment",
+    "name": "Office equipment",
+    "category": "Equipment",
+    "description": "Computers, printers and stationery.",
+    "details": "Computers, printers, filing items and stationery help the centre manage its daily administration."
+  },
+  {
+    "id": "gardening-tools",
+    "name": "Gardening tools",
+    "category": "Gardening",
+    "description": "Spades, rakes, hoses and seeds.",
+    "details": "Spades, rakes, hoses and seeds support community gardening activities."
+  },
+  {
+    "id": "volunteer-time",
+    "name": "Volunteer time",
+    "category": "Volunteering",
+    "description": "Your time, skills and companionship.",
+    "details": "Time, skills and companionship make a real difference to residents and community programmes."
+  },
+  {
+    "id": "other-support",
+    "name": "Other support",
+    "category": "Other",
+    "description": "Something else to offer? Tell us.",
+    "details": "Have something else to offer? Tell the centre through the inquiry form."
+  }
+]
