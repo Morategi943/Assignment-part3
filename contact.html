@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Kwelano Bohloko, Mankweng, Polokwane</title>
+    <meta name="description" content="Contact Kwelano Bohloko Old Age and Disability Centre in Hlatlaganya, Mankweng. Call, email or send us a message and find us on the map.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOUR-SITE.netlify.app/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | Kwelano Bohloko, Mankweng, Polokwane">
+    <meta property="og:description" content="Call, email or message Kwelano Bohloko in Hlatlaganya, Mankweng, Polokwane.">
+    <meta property="og:url" content="https://YOUR-SITE.netlify.app/contact.html">
+    <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/home.jpeg">
+    <meta name="theme-color" content="#176b3a">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"NGO","name":"Kwelano Bohloko Old Age and Disability Centre",
+     "url":"https://YOUR-SITE.netlify.app/","email":"kboadc1712@gmail.com","telephone":"+27720551036",
+     "address":{"@type":"PostalAddress","streetAddress":"Stand no. 02, Hlatlaganya","addressLocality":"Mankweng, Polokwane","addressRegion":"Limpopo","addressCountry":"ZA"}}
+    </script>
+
+</head>
+
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="images/logo.png"
+             alt="Kwelano Bohloko logo"
+             width="55" height="55">
+
+        <span class="site-name">Kwelano Bohloko</span>
+
+    </div>
+
+
+    <nav aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="support.html">Support</a>
+
+        <a href="inquiry.html">inquiry</a>
+
+        <a href="contact.html"
+           class="active" aria-current="page">Contact</a>
+
+        <a href="sitemap.html">Sitemap</a>
+
+    </nav>
+
+</header>
+
+
+<main id="main">
+
+    <section class="page-header">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            We would love to hear from you.
+        </p>
+
+    </section>
+
+
+    <section class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <h2>Phone</h2>
+
+            <p>
+                Call the centre on either of these numbers.
+            </p>
+
+            <a href="tel:+27720551036">072 055 1036</a>
+            <br>
+            <a href="tel:+27765312460">076 531 2460</a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h2>Email</h2>
+
+            <p>
+                Send us an email for general questions,
+                support and partnership inquiries.
+            </p>
+
+            <a href="mailto:kboadc1712@gmail.com">
+                kboadc1712@gmail.com
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h2>Location</h2>
+
+            <p>
+                Kwelano Bohloko Old Age and Disability Centre
+            </p>
+
+            <p>
+                Stand no. 02, Hlatlaganya, Mankweng area,
+                Polokwane, Limpopo, South Africa
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT FORM (section 4.1) -->
+    <section class="form-section">
+
+        <h2 class="section-title">Send Us a Message</h2>
+
+        <form id="contact-form"
+              action="mailto:kboadc1712@gmail.com"
+              method="post"
+              enctype="text/plain"
+              novalidate>
+
+            <p class="form-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
+            <label for="name">Full name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" data-rule="name" required
+                   aria-describedby="err-name" autocomplete="name">
+            <span class="error" id="err-name" aria-live="polite"></span>
+
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" data-rule="email" required
+                   aria-describedby="err-email" autocomplete="email" inputmode="email">
+            <span class="error" id="err-email" aria-live="polite"></span>
+
+            <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" data-rule="phone" required
+                   aria-describedby="err-phone" autocomplete="tel" inputmode="tel"
+                   placeholder="072 055 1036">
+            <span class="error" id="err-phone" aria-live="polite"></span>
+
+            <label for="type">Type of message <span aria-hidden="true">*</span></label>
+            <select id="type" name="type" data-rule="select" required aria-describedby="err-type">
+                <option value="">Choose...</option>
+                <option value="General question">General question</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Media">Media request</option>
+                <option value="Complaint">Complaint</option>
+            </select>
+            <span class="error" id="err-type" aria-live="polite"></span>
+
+            <label for="subject">Subject <span aria-hidden="true">*</span></label>
+            <input type="text" id="subject" name="subject" data-rule="subject" required
+                   aria-describedby="err-subject" maxlength="80">
+            <span class="error" id="err-subject" aria-live="polite"></span>
+
+            <label for="message">Your message <span aria-hidden="true">*</span></label>
+            <small id="hint-message">Between 10 and 500 characters.</small>
+            <textarea rows="6" maxlength="500" id="message" name="message"
+                      data-rule="message" required
+                      aria-describedby="err-message hint-message"></textarea>
+            <span class="error" id="err-message" aria-live="polite"></span>
+            <p class="char-count" id="msg-count">0 / 500</p>
+
+            <button class="btn" type="submit">Prepare email</button>
+
+        </form>
+
+        <div class="form-result" id="form-result" aria-live="polite" hidden></div>
+
+    </section>
+
+
+    <!-- MAP (section 2.1) -->
+    <section class="interactive">
+
+        <h2>Find Us</h2>
+
+        <div id="map" role="region"
+             aria-label="Map showing the location of Kwelano Bohloko"></div>
+
+        <p class="map-credit">
+            Approximate location. Map data &copy;
+            <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+        </p>
+
+    </section>
+
+
+    <section class="contact-bottom">
+
+        <h2>Have a Question?</h2>
+
+        <p>
+            Want to donate, volunteer or ask about our services?
+            Use our inquiry form and tell us how we can assist you.
+        </p>
+
+        <a href="inquiry.html"
+           class="btn">
+            Go to the Inquiry Form
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>Kwelano Bohloko Old Age and Disability Centre</strong>
+        <p>&copy; 2026 Kwelano Bohloko. NPO listed with the Limpopo Department of Social Development.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </div>
+
+    <div>
+
+        <a href="index.html">Home</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="sitemap.html">Sitemap</a>
+
+    </div>
+
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/forms.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+
+</html>
