@@ -1,0 +1,55 @@
+All pages (index, about, services, support, inquiry, contact, sitemap)
+
+lang changed to en-ZA. Added a unique title tag, meta description, canonical link and Open Graph tags to every page.
+One <h1> per page: the logo text is now a <span class="site-name"> and each page title is the <h1>. Section and card titles use <h2>/<h3> in order. style.css selectors were changed to match.
+Added a skip-to-content link, id="main", aria-label on the navigation and aria-current="page" on the active link.
+Added the missing Sitemap link to the navigation on index.html. Standardised the footer on all pages and fixed the broken <p> tag in the footers of support.html and sitemap.html.
+Images: lowercase file names (e.g. support.jpeg) so they load on case-sensitive hosting, descriptive alt text, width/height on the logo and loading="lazy" on images below the first screen. Added the logo as the browser-tab icon.
+
+JavaScript enhancements (2.1) (js/script.js, plain JavaScript, no jQuery)
+
+services.html: tabbed "Find the Support That Fits You" section with ARIA roles and left/right arrow-key support.
+services.html: FAQ accordion with a smooth open/close transition and aria-expanded state.
+support.html: each item has a Details button that opens a modal built with createElement. It closes with the X button, a click outside or the Esc key, and focus returns to the button. "Offer this" opens the inquiry form with the item filled in.
+about.html: photo gallery with a lightbox (previous/next buttons, arrow keys, Esc, caption with image count). Works with the keyboard.
+contact.html: interactive map using Leaflet 1.9.4 and OpenStreetMap, with a marker and popup for the centre.
+All pages: scroll-reveal fade-in (CSS transitions + IntersectionObserver), hover transitions on cards, buttons and gallery images. Animations are switched off for visitors who prefer reduced motion.
+
+Dynamic content (2.2)
+
+support.html: the "Items the Centre Needs" list is no longer typed in HTML. It is loaded from data/needs.json with fetch and the cards are built with DOM methods. An error message shows if the file cannot load.
+support.html: live search, category filter and sort (name A to Z, Z to A, category), with a "Showing X of Y items" counter.
+support.html: the Donate, Volunteer, Partner and Offer Support buttons open inquiry.html?type=..., and the form pre-selects the matching reason.
+
+SEO (3)
+
+Titles, descriptions and headings include local keywords (Mankweng, Polokwane, Limpopo, old age and disability centre, volunteer, donate).
+Internal links added between pages (services, support, contact, inquiry, about).
+robots.txt and sitemap.xml added to the site root (7 pages).
+contact.html: JSON-LD structured data (NGO with address, phone, email) for local SEO.
+Mobile-friendly: viewport tag and responsive CSS. Social sharing preview via Open Graph tags.
+Page speed: scripts use defer, images lazy-load, cache headers set in _headers.
+Security: _headers adds Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy and Permissions-Policy. User text is displayed with textContent, never innerHTML. The inquiry form has a hidden anti-spam field. HTTPS is provided by the host.
+
+Forms (4)
+
+inquiry.html (the enquiry form page): fields for name, email, phone, reason for contact, optional item, quantity and preferred date, message and a consent checkbox. js/forms.js validates every field before sending (letters-only name, email format, South African phone number, quantity range, date not in the past, message 10 to 500 characters with a live counter) and shows an error under each field.
+inquiry.html: valid data is submitted with AJAX (fetch POST to Formspree) without reloading the page. The page then shows a response with a reference number and cost or availability information for the chosen reason (donation, volunteering, sponsorship/partnership, services). A failed request shows an error message.
+contact.html: contact form with name, email, phone, message type, subject and message. After validation, the details are compiled into an email addressed to kwelanobohloko@gmail.com, with a preview and a button that opens it in the visitor's email app. The form's action is a mailto: fallback.
+contact.html: real phone numbers, email and address replaced the placeholder details. The email address is now the same (kwelanobohloko@gmail.com) in the contact card, form, structured data, FAQ and script. Corrected the lowercase "inquiry" label in the navigation.
+services.html: FAQ answers updated to match the inquiry form's options.
+inquiry.html: replaced the "front-end demonstration" notice with a note that the inquiry is sent through a secure form service.
+
+Other files
+
+css/style.css: heading selectors updated (logo text, hero, page header, cards, notices, contact cards, sitemap items) and a block of new styles added for tabs, accordion, modal, lightbox, gallery, map, forms, search controls and accessibility helpers.
+New files: js/script.js, js/forms.js, data/needs.json, robots.txt, sitemap.xml, _headers.
+
+Note 
+
+The enquiry form page is inquiry.html. The name was kept from Parts 1 and 2 so existing links keep working.
+
+Deployment
+
+Site deployed on [Netlify / GitHub Pages]: [your live address]
+Placeholder address https://kwelano-bohloko.netlify.app replaced with the live address in all pages, robots.txt 
